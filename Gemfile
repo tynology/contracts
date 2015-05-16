@@ -30,6 +30,8 @@ gem 'paperclip', '~> 4.2'
 
 gem 'aws-sdk', '<2.0'
 
+gem 'prawn'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -52,7 +54,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '~> 1.3.5'
 
 end
 

@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Date:</strong>
+  <%= @contract.date %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -10,5 +13,31 @@
   <%= @contract.advertiser %>
 </p>
 
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<p>
+  <strong>Contact:</strong>
+  <%= @contract.contact %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @contract.address %><br />
+  <%= @contract.city %>, <%= @contract.state %> <%= @contract.zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contract.phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @contract.fax %>
+</p>
+
+<p>
+  <strong>Contact Email:</strong>
+  <%= @contract.email %>
+</p>
+
+<%= link_to 'Download Contract', contract_path(@contract, :format => 'pdf') %> | <%= link_to 'Edit', edit_contract_path(@contract) %> |
 <%= link_to 'Back', contracts_path %>

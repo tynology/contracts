@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :contracts
 
   devise_for :users
-  root "pages#home"
+  root "contracts#index"
   get "about" => "pages#about"
 
   # The priority is based upon order of creation: first created -> highest priority.

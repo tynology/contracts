@@ -1,3 +1,11 @@
+  <% if user_signed_in? %>
+<div class="jumbotron center">
+<h2>Welcome to the </h2>
+<h1>ZCode Contract Manager</h1>
+
+          Holding Spot for stuff.
+</div>
+
 <h1>Contracts</h1>
 
 <table>
@@ -25,3 +33,14 @@
 <br>
 
 <%= link_to 'New Contract', new_contract_path %>
+
+<% else %>
+<div class="jumbotron center">
+<h2>Welcome to the </h2>
+<h1>ZCode Contract Manager</h1>  
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
+</div>

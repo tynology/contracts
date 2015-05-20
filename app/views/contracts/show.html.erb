@@ -1,3 +1,10 @@
+<p>  
+  <strong>Rep:</strong>
+    <% c = @contract.rep_id %>
+    <% f = User.find(c) %>
+    <%= f.name %>
+
+</p>
 <p>
   <strong>Date:</strong>
   <%= @contract.date %>

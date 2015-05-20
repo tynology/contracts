@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+<% if current_user.admin == true %>
+    <div class="field">
+    <%= f.label :rep_id %><br>
+    <%= f.collection_select( :rep_id, User.all, :id, :name ) %>
+  </div>
+<% else %>
+ <div class="field">
+    <%= f.label :rep_id %><br>
+    <%= f.collection_select( :rep_id, User.all, :id, :name ) %>
+<% end %>
+
     <div class="field">
     <%= f.label :date %><br>
     <%= f.date_select :date %>

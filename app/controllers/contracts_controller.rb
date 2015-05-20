@@ -20,6 +20,9 @@ class ContractsController < ApplicationController
           type: "application/pdf"
         end
       end
+
+  r = @contract.rep_id
+  @ae = User.find(r)
   end
 
   # GET /contracts/new
@@ -79,7 +82,7 @@ class ContractsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contract_params
-      params.require(:contract).permit(:name, :advertiser, :date, :contact, :city, :state, :zip, :phone, :fax, :email, :address)
+      params.require(:contract).permit(:name, :advertiser, :date, :contact, :city, :state, :zip, :phone, :fax, :email, :address, :rep_id)
     end
 
 
